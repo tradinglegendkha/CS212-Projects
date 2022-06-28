@@ -1,3 +1,5 @@
+package Project2;
+
 public class property {
     private String name;
     private String kind;
