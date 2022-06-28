@@ -1,0 +1,27 @@
+Promp 1) Create a restaurant. You will hvae customers come into the restaurant. The restaurant has three
+waiters that wait on 5 different tables. There is one chef. The waiters seat the customer, take the order,
+bring the order to the chef, and then bring the food to the customer once it is ready. The customers eat and 
+then leave the restaurant. Use interface/abstract to design this. You should use at least one generic method 
+or class, and use multi-threading to do this. Show how this runs with customers eating for random amounts of time. 
+
+
+The output: 
+it should look like this, implemented in multi-threading 
+{ One example
+    waiterOne seats a customer on tableOne
+    waiterOne takes an order 
+    waiterOne brings order to the chef 
+    waiterOne brings food to the customer
+    customer eats 
+    customer leaves 
+} 
+
+{ Second example 
+    waiterTwo seats a customer on tableTwo
+    waiterTwo takes an order 
+    waiterTwo brings order to the chef 
+    waiterTwo brings food to the customer
+    customer eats 
+    customer leaves
+}
+
