@@ -11,8 +11,6 @@ public class Restaurant {
 
         thread.start(); //starting thread
 
-
-
     }
     /*
     public waiterseatCust() {
