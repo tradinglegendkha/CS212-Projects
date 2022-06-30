@@ -1,0 +1,38 @@
+Prompt - Create a store.  The store sells shirts, pants, and suits (each their own class).  Have a way to keep track of inventory and orders.  
+When a customer makes an order, the clerk should process it.  If there is a problem, the manager should be called.
+You must have a way to sort items (Comparable) either in the customers cart or in inventory.  Make sure to explain which Java Design Pattern you chose and implemented.
+
+Well for this prompt, we need to get and set the different types of shirts, pants, and suits that is is being sold in the clothing store which is to be named later.
+First order of business is for clerk or people who work in the store to organize each shirts, pants, and suits in order of their sizes and each size should go together in the clothing rack.
+To do that, the workers and clerks should sort different types of clothing based on their colors, sizes, and product names. 
+In person orders, the customers can browse and buy the different clothing in the store, but for people who order online there should be exact amounts for each different clothing piece are there left in the store so the customers are satisfied. 
+However, if the amount of clothing for each type are pittance and very little, then the customers will be not satisfied and would have to wait for longer amount of time.
+The steps we have taken is shown underneath in ways we planned and programmed this prompt.
+
+
+
+1. The whole program mainly uses the ArrayList collection, and the ArrayList is added, deleted, checked and modified.
+It's Calling parameters of different classes to increase or decrease data by multi-threading
+Globally, the multithreading we use is addGoods();
+                     delGoodsList()
+
+                     showGoods();
+                     buyGoods();
+
+                     showShopCar();
+                     delStoreCar();
+
+                     totalPrice()
+                     GetRating();
+
+At present, although the product information can be added and saved, how to solve the problem of saving the shopping information in a textile after we checkout. (or print it out as javaFX)
+It can display the number of purchased items, the total price, the courier number, and the time of purchase.
+When a customer makes an order, the clerk should process it.  If there is a problem, the manager should be called
+
+We manually add the product's name, size, color, and price into the arraylist through addGoods(). Can be added or deleted.
+
+
+Then showGoods(); show the goods of the goods website.
+
+After packaging the goods, customers start to open the mall to shop. showGoods();
+
