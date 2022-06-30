@@ -15,8 +15,16 @@ We will have two interfaces:
         takesOrder()
         bringsOrder()
         bringsFood()
-Professor said to use arrays of threads, will help with the 3 waiters problem
+(Original plan) Professor said to use arrays of threads, will help with the 3 waiters problem
 Tried making these but it will take a lot of time which I don't have, (need to study for the final), will go with plan b, create multiple classes
+String[] waiters = new String[4];
+        for(int i=1; i<waiters.length; i++) {
+            System.out.println("Waiter "+i);
+        }
+
+Plan b: Add two more waiter classes, this will have their names. 
+Add two more runnable classes (or threads) I will be able to change the milliseconds.
+Add synchronization which includes, wait() and notify() so the code runs smoothly
 
 
 The output: 

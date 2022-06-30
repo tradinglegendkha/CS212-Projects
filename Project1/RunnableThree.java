@@ -1,10 +1,9 @@
 package Project1;
-import java.lang.*;
 
-public class MyRunnable implements Runnable {
+public class RunnableThree implements Runnable {
     @Override
     public void run() {
-        Waiter waiter = new Waiter();
+        WaiterThree waiter = new WaiterThree();
         Customer customer = new Customer();
         for(int i=0; i<1; i++) {
             waiter.seatsCust();
@@ -31,6 +30,7 @@ public class MyRunnable implements Runnable {
             try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
         }
 
-        System.out.println("Restaurant closed");
+
+
     }
 }
