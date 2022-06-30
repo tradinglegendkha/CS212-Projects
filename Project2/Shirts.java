@@ -1,6 +1,6 @@
 package Project2;
 
-public class Shirts extends Store {
+public class Shirts extends shop {
     private int shirts;
 
     public int getShirts() {

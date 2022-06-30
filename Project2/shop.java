@@ -1,8 +1,10 @@
 package Project2;
+import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
-public class Store {
+public class shop {
     //Collection of store varieties
     ArrayList<property> goodsList = new ArrayList<>();
     //shopping cart collection
@@ -10,7 +12,7 @@ public class Store {
 
     //How to add items to the store
     public void addGoods() {
-        System.out.println("Please enter the added pet information (name->type->size->price):");
+        System.out.println("Please enter the added product information (name->type->size->price):");
         //Create an object goods property, type goods
         property pty = new property(getString(), getString(), getInt(), getDouble());
         //Determine whether to add to the goodsList collection
@@ -45,8 +47,8 @@ public class Store {
     public void buyGoods() {
         boolean bool = goodsList.isEmpty();
         if (bool != true) {
-            System.out.print("Please enter the serial number of the pet you want to buy:");
-            //Enter the serial number of the purchased pet
+            System.out.print("Please enter the serial number of the product you want to buy:");
+            //Enter the serial number of the purchased product
             int n = getInt();
             //Prevent subscript out of bounds
             if (n <= goodsList.size()) {
@@ -56,7 +58,7 @@ public class Store {
                 System.out.println(" ");
             } else {
                 System.out.println("Failed purchase!");
-                System.out.println("The pet you want doesn't exist, please check the store's existing pets!");
+                System.out.println("The product you want doesn't exist, please check the store's existing products!");
                 System.out.println(" ");
             }
         } else {
@@ -74,14 +76,34 @@ public class Store {
             shopList();
             System.out.println(" ");
         } else {
-            System.out.println("You haven't bought a pet goods!");
+            System.out.println("You haven't bought a product goods!");
             System.out.println(" ");
         }
+    }
+    public static int generateRandom(int n)
+    {
+        if (n <= 0) {
+            throw new IllegalArgumentException("n must be positive");
+        }
+
+        // obtains a `SecureRandom` instance via the no-argument constructor
+        SecureRandom random = new SecureRandom();
+
+        // invoke generateSeed method to generate a given number of seed bytes
+        byte bytes[] = random.generateSeed(20);
+
+        // seed the `SecureRandom` instance with the specified seed bytes
+        random.nextBytes(bytes);
+
+        // nextInt() is inherited from class java.util.Random
+        return random.nextInt(n + 1);
     }
 
     //Shopping cart checkout method
     public void totalPrice() {
-        boolean bool = stoCarList.isEmpty();
+
+        boolean bool =stoCarList.isEmpty();
+
         if (bool != true) {
             System.out.println("-------List-------");
             System.out.println("serial number" +
@@ -90,12 +112,16 @@ public class Store {
                                 "\t" + "size" +
                                 "\t" + "price" +
                                 "\t");
+
+
+
             shopList();
             //empty cart
             stoCarList.clear();
             //Check if the shopping cart is empty
             if (stoCarList.isEmpty()) {
                 System.out.println("Successful settlement!");
+
                 System.out.println(" ");
             } else {
                 System.out.println("Settlement failed!");
@@ -111,7 +137,7 @@ public class Store {
     public void delStoreCar() {
         boolean bool = stoCarList.isEmpty();
         if (bool != true) {
-            System.out.print("Please enter the serial number of the pet you want to delete in the shopping cart:");
+            System.out.print("Please enter the serial number of the product you want to delete in the shopping cart:");
             int n = getInt();
             //防止下标越界
             if ((n - 1) <= stoCarList.size()) {
@@ -133,7 +159,7 @@ public class Store {
     public void delGoodsList() {
         boolean bool = goodsList.isEmpty();
         if (bool != true) {
-            System.out.print("Please enter the serial number of the pet you want to delete in the store：");
+            System.out.print("Please enter the serial number of the product you want to delete in the store：");
             int n = getInt();
             //Prevent subscript out of bounds
             if ((n - 1) <= goodsList.size()) {
@@ -150,23 +176,50 @@ public class Store {
             System.out.println(" ");
         }
     }
+    public void Goods_Manager(){
+        boolean code = goodsList.isEmpty();
+        if(code != true){
+            System.out.print("Please enter your shopping order code ");
+            Scanner sc = new Scanner(System.in);
+            if(sc.equals(shop.generateRandom(10))){
+                System.out.println("This is our manager Phone#: 123-1233-1233");
+            }else{
+                System.out.println("Sorry your shoping code is error");
+            }
+        }
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Store shop = new Store();
+        shop shop = new shop();
         while (true) {
             System.out.println("--------"+"Welcome our Store"+"--------");
+            int n = 10;
+            System.out.println("This is your courier number");
+            for (int i = 0; i < 10; i++) {
+
+                String couries_num = String.valueOf(generateRandom(n));
+                System.out.print(couries_num);
+
+            }
+            System.out.println();
             System.out.println("Please enter the serial number (" +
                     "1: Add goods " +
                     "2: Remove goods " +
                     "3: Open the mall " +
                     "4: Purchase " +
                     "5: Open the shopping cart " +
-                    "6: Delete the shopping cart pet " +
+                    "6: Delete the shopping cart product " +
                     "7: Checkout " +
+                    "8: After-sales service"+
                     "8: Leave" +
                     ")");
+
+
+
+
             switch (sc.nextInt()) {
+
                 case 1:
                     shop.addGoods();
                     break;
@@ -187,8 +240,15 @@ public class Store {
                     break;
                 case 7:
                     shop.totalPrice();
+
+
                     break;
                 case 8:
+
+                    shop.Goods_Manager();
+
+                    break;
+                case 9:
                     System.out.println("Goodbye");
                     return;
             }
