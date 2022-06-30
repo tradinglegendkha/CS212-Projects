@@ -25,7 +25,8 @@ String[] waiters = new String[4];
 Plan b: Add two more waiter classes, this will have their names. 
 Add two more runnable classes (or threads) I will be able to change the milliseconds.
 Add synchronization which includes, wait() and notify() so the code runs smoothly
-
+Synchronization has to wait on next patch, need to work on creating the arrays so threads can call one one thing.
+Then I could delete the extra classes and make the code more space efficient (less space). Also need a customer array. 
 
 The output: 
 it should look like this, implemented in multi-threading 
