@@ -12,23 +12,23 @@ public class RunnableOne implements Runnable {
         }
         for(int i=0; i<1; i++) {
             waiter.takesOrder();
-            try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
+            try {Thread.sleep(1600);} catch (InterruptedException e) {e.printStackTrace();}
         }
         for(int i=0; i<1; i++) {
             waiter.bringsOrder();
-            try {Thread.sleep(1800);} catch (InterruptedException e) {e.printStackTrace();}
+            try {Thread.sleep(1500);} catch (InterruptedException e) {e.printStackTrace();}
         }
         for(int i=0; i<1; i++) {
             waiter.bringsFood();
-            try {Thread.sleep(2100);} catch (InterruptedException e) {e.printStackTrace();}
+            try {Thread.sleep(1900);} catch (InterruptedException e) {e.printStackTrace();}
         }
         for(int i=0; i<1; i++) {
             customer.eats();
-            try {Thread.sleep(3300);} catch (InterruptedException e) {e.printStackTrace();}
+            try {Thread.sleep(2300);} catch (InterruptedException e) {e.printStackTrace();}
         }
         for(int i=0; i<1; i++) {
             customer.leaves();
-            try {Thread.sleep(1000);} catch (InterruptedException e) {e.printStackTrace();}
+            try {Thread.sleep(3700);} catch (InterruptedException e) {e.printStackTrace();}
         }
 
         
