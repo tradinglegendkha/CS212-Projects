@@ -28,7 +28,7 @@ public class shop {
     public void showGoods() {
         boolean bool = goodsList.isEmpty();
         if (bool != true) {
-            System.out.println("serial number" + "\t" + "name" + "\t" + "type" + "\t" + "age" + "\t" + "price");
+            System.out.println("serial number" + "\t" + "name" + "\t" + "type" + "\t" + "size" + "\t" + "price");
             //define a sequence number
             int n = 1;
             //Traverse out store items
