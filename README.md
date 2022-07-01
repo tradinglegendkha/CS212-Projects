@@ -19,9 +19,11 @@ https://youtu.be/td5VT3X2sIY
 
 ### Outputs: 
 Project 1 Output
+
 ![Project 1 Output](Project1Output.png)
 
 Project 2 Output
+
 ![Project 2 Output](Project2Output.png)
 
 
